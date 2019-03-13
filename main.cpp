@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
     }
     if (interval[0] != 0)
     {
-        MPI_Bcast(interval, 1, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+        MPI_Bcast(interval, 1, MPI_INT, 0, MPI_COMM_WORLD);
         h = 2.0 * interval[0];
         for (int i = rank + 1; i <= interval[0]; i += size)
         {
